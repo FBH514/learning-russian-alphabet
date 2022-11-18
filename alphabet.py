@@ -13,25 +13,6 @@ class Alphabet:
     def latin_alphabet(self) -> None:
         self.letters = ['A', 'B', 'V', 'G', 'D', 'E', 'Jo', 'Zh', 'Z', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'Kh', 'C', 'Ch', 'Sh', 'Shh', '\"', 'Y', '\'', 'Eh', 'Ju', 'Ja']
 
-    def print_letters(self) -> None:
-        print('Letters: ', end='')
-        for letter in self.letters:
-            print(letter, end=' ')
-        print()
-
-    def check_letter(self, letter) -> bool:
-        left = 0
-        right = len(self.letters) - 1
-        while left <= right:
-            middle = (left + right) // 2
-            if letter == self.letters[middle]:
-                return True
-            elif letter < self.letters[middle]:
-                right = middle - 1
-            else:
-                left = middle + 1
-        return False
-
     def random_index(self) -> Optional[int]:
         if len(self.letters) > 0:
             return random.randint(0, len(self.letters) - 1)
