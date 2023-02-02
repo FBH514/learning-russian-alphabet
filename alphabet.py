@@ -7,6 +7,7 @@ class Alphabet:
     def __init__(self) -> None:
         """
         Initializes the Alphabet object
+        :return: None
         """
         self.letters: list = []
 
@@ -52,6 +53,7 @@ class Alphabet:
         if index is not None:
             self.letters.pop(index)
 
+
 class CyrillicAlphabet(Alphabet):
 
     def __init__(self) -> None:
@@ -69,6 +71,7 @@ class CyrillicAlphabet(Alphabet):
         :return: string representation of the object
         """
         return f"Cyrillic Alphabet {' '.join(self.letters)}"
+
 
 class LatinAlphabet(Alphabet):
 
